@@ -1,0 +1,15 @@
+/Library
+/Logs
+/obj
+/Build
+/Temp
+/Build-Release
+/.vs
+/copydll.bat
+/Debug
+/.idea/
+/update_unity_libil2cpp.bat
+/*.csproj
+/*.sln
+/UserSettings/Layouts
+/Assets/StreamingAssets
