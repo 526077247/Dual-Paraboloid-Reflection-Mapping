@@ -51,9 +51,9 @@
 				half3 view_dir = normalize(_WorldSpaceCameraPos.xyz - i.pos_world);
                 half3 normal_dir = normalize(i.normal_dir);
             	half3 reflect_dir = reflect(-view_dir, normal_dir);
-            	half4 color_cubemap = texCUBElod(_EnvMap, float4(reflect_dir, 0));
+            	half4 color_cubemap = texCUBElod(_EnvMap, float4(reflect_dir, 0.0));
                 half3 env_color = DecodeHDR(color_cubemap, _EnvMap_HDR);
-				return half4(env_color,1.0);
+				return half4(env_color,0);
 			}
 			ENDCG
 		}

@@ -23,7 +23,7 @@ public class DualParaboloidTools : EditorWindow
         EditorWindow.GetWindow<DualParaboloidTools>().Show();
     }
     private Cubemap m_cubeValue;
-    private SizeEnum m_size = SizeEnum._256;
+    private SizeEnum m_size = SizeEnum._512;
     private void OnGUI()
     {
         GUILayout.BeginVertical();
@@ -51,13 +51,13 @@ public class DualParaboloidTools : EditorWindow
             png.Apply();
             File.WriteAllBytes(path, png.EncodeToPNG());
             AssetDatabase.Refresh();
-
+            rt.Release();
         }
     }
     
     private RenderTexture RenderImage()
     {
-        if (m_size == default) m_size = SizeEnum._2048;
+        if (m_size == default) m_size = SizeEnum._512;
         int size = (int) m_size;
         RenderTexture destination = new RenderTexture(size, size, 0);
         Shader sd = Shader.Find("Unlit/DualParaboloidGenerate");

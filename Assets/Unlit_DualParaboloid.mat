@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Unlit_DualParaboloid
-  m_Shader: {fileID: 4800000, guid: 1d49d28a384c4c6fbea416d443d3a1b2, type: 3}
+  m_Shader: {fileID: 4800000, guid: 5fc2d3acbfbc4c27956a707daa09c437, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
